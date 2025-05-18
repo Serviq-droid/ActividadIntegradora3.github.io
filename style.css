@@ -1,0 +1,221 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #fce4ec, #e3f2fd);
+    color: #333;
+  }
+  
+  header {
+    background: #6a1b9a;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    letter-spacing: 1px;
+  }
+  
+  header p {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .section {
+    margin: 60px 0;
+    text-align: center;
+  }
+  
+  .section h2 {
+    color: #6a1b9a;
+    margin-bottom: 20px;
+    font-size: 2rem;
+  }
+  
+  .image-box {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .image-box img {
+    max-width: 90%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+  }
+  
+  .image-box img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+  }
+  
+  .informe-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+    background-color: #fff3e0;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .informe-viewer {
+    flex: 1 1 60%;
+  }
+  
+  .informe-viewer iframe {
+    width: 100%;
+    height: 600px;
+    border: none;
+    border-radius: 10px;
+  }
+  
+  .informe-info {
+    flex: 1 1 35%;
+    text-align: left;
+  }
+  
+  .informe-info h2 {
+    color: #e65100;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .informe-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+  }
+  
+  .download-btn {
+    background-color: #ff6f00;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .download-btn:hover {
+    background-color: #e65100;
+  }
+  
+  footer {
+    background-color: #4a148c;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+    font-size: 0.95rem;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .animated-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .svg-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Formato base para cada forma flotante */
+  .float-shape {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    opacity: 0.15;
+    animation: float-around 30s infinite linear;
+  }
+  
+  /* Distribución aleatoria con transform */
+  .float-shape:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+  .float-shape:nth-child(2) { top: 20%; left: 80%; animation-delay: 3s; }
+  .float-shape:nth-child(3) { top: 40%; left: 30%; animation-delay: 6s; }
+  .float-shape:nth-child(4) { top: 70%; left: 60%; animation-delay: 1s; }
+  .float-shape:nth-child(5) { top: 85%; left: 15%; animation-delay: 5s; }
+  .float-shape:nth-child(6) { top: 50%; left: 90%; animation-delay: 7s; }
+  .float-shape:nth-child(7) { top: 65%; left: 25%; animation-delay: 4s; }
+  .float-shape:nth-child(8) { top: 30%; left: 50%; animation-delay: 9s; }
+  .float-shape:nth-child(9) { top: 20%; left: 5%; animation-delay: 2s; }
+  .float-shape:nth-child(10) { top: 75%; left: 75%; animation-delay: 6s; }
+  .float-shape:nth-child(11) { top: 55%; left: 35%; animation-delay: 1s; }
+  .float-shape:nth-child(12) { top: 15%; left: 60%; animation-delay: 8s; }
+  .float-shape:nth-child(13) { top: 35%; left: 20%; animation-delay: 3s; }
+  .float-shape:nth-child(14) { top: 45%; left: 70%; animation-delay: 5s; }
+  .float-shape:nth-child(15) { top: 60%; left: 40%; animation-delay: 7s; }
+  
+  @keyframes float-around {
+    0% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.1; }
+    25% { transform: translate(20px, -30px) scale(1.1) rotate(15deg); opacity: 0.2; }
+    50% { transform: translate(-20px, 20px) scale(0.95) rotate(-10deg); opacity: 0.25; }
+    75% { transform: translate(10px, -10px) scale(1.05) rotate(10deg); opacity: 0.2; }
+    100% { transform: translate(0, 0) scale(1) rotate(0deg); opacity: 0.1; }
+  }
+  
+  /* Estilos SVG por tipo */
+  .corazon::before {
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 32 29.6" xmlns="http://www.w3.org/2000/svg"><path fill="%23e91e63" d="M23.6,0c-3.4,0-6.3,2.1-7.6,5.1C14.7,2.1,11.8,0,8.4,0C3.8,0,0,3.8,0,8.4c0,9.2,16,21.2,16,21.2s16-12,16-21.2C32,3.8,28.2,0,23.6,0z"/></svg>') no-repeat center/contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .estrella::before {
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><polygon fill="%23ff9800" points="24,0 29,16 48,17 34,29 38,48 24,38 10,48 14,29 0,17 19,16"/></svg>') no-repeat center/contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .escudo::before {
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><path fill="%233f51b5" d="M32,0C24,8,8,8,8,16v16c0,24,24,32,24,32s24-8,24-32V16C56,8,40,8,32,0z"/></svg>') no-repeat center/contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .nina::before {
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg"><circle fill="%23009688" cx="32" cy="12" r="8"/><path fill="%23009688" d="M24 28c-4 0-8 4-8 8v20h8V40h16v16h8V36c0-4-4-8-8-8H24z"/></svg>') no-repeat center/contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
+  .flor::before {
+    content: '';
+    background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle fill="%23673ab7" cx="50" cy="50" r="10"/><circle fill="%23673ab7" cx="80" cy="50" r="10"/><circle fill="%23673ab7" cx="20" cy="50" r="10"/><circle fill="%23673ab7" cx="50" cy="20" r="10"/><circle fill="%23673ab7" cx="50" cy="80" r="10"/></svg>') no-repeat center/contain;
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+  
