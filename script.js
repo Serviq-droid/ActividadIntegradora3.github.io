@@ -4,4 +4,3 @@ function descargarInforme() {
     enlace.download = 'Informe_de_actividades_final.pdf';
     enlace.click();
   }
-  
